@@ -1,0 +1,15 @@
+version: 2
+
+macros:
+  - name: price_normalization
+    arguments:
+      - name: column_name
+        type: column
+        description: "Converts column data type into float"
+      
+  - name: date_formatting
+    arguments:
+      - name: date_column
+        type: column
+        description: "Normalize date column"
+      

@@ -1,0 +1,1 @@
+SELECT * FROM {{ ref("dim_host") }} WHERE superhost NOT IN ('Y', 'N') 

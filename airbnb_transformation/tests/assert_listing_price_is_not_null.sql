@@ -1,0 +1,1 @@
+SELECT * FROM {{ ref("fct_listings")}} WHERE listing_price IS NULL

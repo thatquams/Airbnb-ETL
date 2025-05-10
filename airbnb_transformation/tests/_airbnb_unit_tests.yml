@@ -1,0 +1,33 @@
+unit_tests:
+  - name: test_review_sentiment_case
+    description: "Validate review sentiments case statement"
+    model: dim_reviews
+    given:
+      - input: ref('stg_airbnb_reviews')
+        rows:
+          - {listing_id: 3176,    reviewer_name: Milan, sentiment: positive}
+          - {listing_id: 3176,    reviewer_name: Benedetta, sentiment: neutral}
+          - {listing_id: 7071,    reviewer_name: Sylvie, sentiment: positive}
+
+    expect:
+      rows:
+        - {listing_id: 3176, reviewer_name: Milan,   sentiment: 1}
+        - {listing_id: 3176, reviewer_name: Benedetta, sentiment: 2}
+        - {listing_id: 7071, reviewer_name: Sylvie, sentiment: 1}
+
+
+  - name: test_validate_number_of_reviews
+    description: "Validate Number of reviews"
+    model: reviews_agg
+    given:
+      - input: ref('dim_reviews')
+        rows:
+          - { sentiment: 2}
+          - { sentiment: 1}
+          - { sentiment: 0}
+
+    expect:
+      rows:
+        - { sentiment: 2, tot_reviews: 147640}
+        - { sentiment: 1, tot_reviews: 232554}
+        - { sentiment: 0, tot_reviews: 30090}

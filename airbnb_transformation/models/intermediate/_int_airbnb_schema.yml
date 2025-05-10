@@ -1,0 +1,68 @@
+version: 2
+
+models:
+  - name: fct_listings
+    description: >
+      Fact table containing listing-level data, including host and property identifiers.
+      This table represents the core transactional entity in the Airbnb dataset.
+
+    columns:
+      - name: listing_id
+        description: Unique identifier for each Airbnb listing.
+        tests:
+          - unique
+          - not_null
+
+      - name: host_id
+        description: Foreign key linking each listing to a host in the dim_host table.
+        tests:
+          - relationships:
+              to: ref('dim_host')
+              field: host_id
+          - not_null
+
+  - name: dim_host
+    description: >
+      Dimension table containing details about hosts. Includes attributes like Superhost
+      status and serves as a lookup for listings and reviews authored by the host.
+
+    columns:
+      - name: host_id
+        description: Unique identifier for each host.
+        tests:
+          - unique
+          - not_null
+
+      - name: superhost
+        description: >
+          Indicates whether a host has Superhost status. Expected values are 'Y' for yes and 'N' for no.
+        tests:
+          - accepted_values:
+              values: ['Y', 'N']
+
+  - name: dim_reviews
+    description: >
+      Dimension table containing information about reviews left by guests.
+      Includes sentiment classification and a reference to the associated listing.
+
+    columns:
+      - name: review_id
+        description: Unique identifier for each review.
+        tests:
+          - unique
+          - not_null
+
+      - name: sentiment
+        description: >
+          Numerical sentiment score assigned to each review.
+          Values: 0 = negative, 1 = neutral, 2 = positive.
+        tests:
+          - accepted_values:
+              values: [0, 1, 2]
+
+      - name: listing_id
+        description: Foreign key linking each review to a listing in the fct_listings table.
+        tests:
+          - relationships:
+              to: ref('fct_listings')
+              field: listing_id

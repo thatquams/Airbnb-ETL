@@ -1,0 +1,17 @@
+version: 2
+
+
+sources:
+  - name: airbnb_listings
+    database: AIRBNB  
+    schema: RAW  
+    tables:
+      - name: RAW_HOSTS
+        description: The table contains records of Airbnb host profiles. Each record includes details about the host name, their superhost status, and the creation and update timestamps. 
+
+      - name: RAW_LISTINGS
+        description: The table contains records of Airbnb listings. Each record represents a unique listing and includes details such as the listing URL, name, room type, minimum nights requirement, host ID, price, and creation and update timestamps.
+
+      - name: RAW_REVIEWS
+        description: The table contains records of user reviews for listings on Airbnb. Each record includes the unique identifier of the listing, the date of the review, the name of the reviewer, the text of the review, and the sentiment analysis result.
+    

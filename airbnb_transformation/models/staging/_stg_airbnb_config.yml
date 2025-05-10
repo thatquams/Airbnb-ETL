@@ -1,0 +1,65 @@
+version: 2
+
+models:
+  - name: stg_airbnb_listings
+    description: >
+      Staging model for Airbnb listings. Cleans and standardizes raw listing data,
+      including property details like room type, location, and host reference.
+
+    columns:
+      - name: id
+        description: Unique identifier for each listing.
+        tests:
+          - unique
+          - not_null
+
+      - name: room_type
+        description: >
+          Type of accommodation offered, such as an entire apartment or a private room.
+        tests:
+          - accepted_values:
+              values: ["Entire home/apt", "Private room", "Shared room", "Hotel room"]
+
+  - name: stg_airbnb_hosts
+    description: >
+      Staging model for Airbnb hosts. Prepares raw host data and includes flags
+      such as superhost status and host-listing relationships.
+
+    columns:
+      - name: id
+        description: Unique identifier for each host.
+        tests:
+          - unique
+          - not_null
+
+          - relationships:
+              to: ref('stg_airbnb_listings')
+              field: host_id
+
+      - name: is_superhost
+        description: >
+          Indicates whether the host is a Superhost ('t' for true, 'f' for false).
+        tests:
+          - accepted_values:
+              values: ["t", "f"]
+
+  - name: stg_airbnb_reviews
+    description: >
+      Staging model for Airbnb reviews. Extracts review-level data,
+      including references to listings and the sentiment classification.
+
+    columns:
+      - name: listing_id
+        description: Foreign key linking each review to its associated listing.
+        tests:
+          - not_null
+          - relationships:
+              to: ref('stg_airbnb_listings')
+              field: id
+
+      - name: sentiment
+        description: >
+          Classification of the review's tone or emotion—either positive, negative, or neutral.
+        tests:
+          - accepted_values:
+              values: ["positive", "negative", "neutral"]

@@ -1,0 +1,269 @@
+[0m06:51:13.972344 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DA0AB1AC30>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DA0AA15130>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DA086E8C50>]}
+
+
+============================== 06:51:13.979687 | 034c2553-b15a-4b85-a895-efad22336595 ==============================
+[0m06:51:13.979687 [info ] [MainThread]: Running with dbt=1.9.4
+[0m06:51:13.981500 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'fail_fast': 'False', 'log_path': 'logs', 'version_check': 'True', 'profiles_dir': 'C:\\Users\\XPS 15\\.dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'log_format': 'default', 'invocation_command': 'dbt init airbnb_transformation', 'static_parser': 'True', 'introspect': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m06:51:14.043392 [debug] [MainThread]: Starter project path: C:\Users\XPS 15\OneDrive\Documents\DE\E_COMMERCE_ETL\env\Lib\site-packages\dbt\include\starter_project
+[0m06:51:14.071815 [info ] [MainThread]: 
+Your new dbt project "airbnb_transformation" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m06:51:14.073853 [info ] [MainThread]: Setting up your profile.
+[0m06:52:34.476621 [info ] [MainThread]: Profile airbnb_transformation written to C:\Users\XPS 15\.dbt\profiles.yml using target's profile_template.yml and your supplied values. Run 'dbt debug' to validate the connection.
+[0m06:52:34.480283 [debug] [MainThread]: Command `dbt init` succeeded at 06:52:34.479643 after 80.69 seconds
+[0m06:52:34.482155 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DA0AE94470>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DA0B086420>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DA0AB4AFF0>]}
+[0m06:52:34.482819 [debug] [MainThread]: Flushing usage events
+[0m06:52:35.860818 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m06:52:54.848372 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F62459FE60>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F6270A3FE0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F6270A1F40>]}
+
+
+============================== 06:52:54.854112 | 4b6733f5-b585-4e04-83bc-ae8872a31a47 ==============================
+[0m06:52:54.854112 [info ] [MainThread]: Running with dbt=1.9.4
+[0m06:52:54.855466 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\XPS 15\\.dbt', 'fail_fast': 'False', 'debug': 'False', 'log_path': 'logs', 'version_check': 'True', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt debug', 'log_format': 'default', 'introspect': 'True', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m06:52:54.900532 [info ] [MainThread]: dbt version: 1.9.4
+[0m06:52:54.901837 [info ] [MainThread]: python version: 3.12.3
+[0m06:52:54.902964 [info ] [MainThread]: python path: C:\Users\XPS 15\OneDrive\Documents\DE\E_COMMERCE_ETL\env\Scripts\python.exe
+[0m06:52:54.904031 [info ] [MainThread]: os info: Windows-10-10.0.19045-SP0
+[0m06:52:56.086494 [info ] [MainThread]: Using profiles dir at C:\Users\XPS 15\.dbt
+[0m06:52:56.087868 [info ] [MainThread]: Using profiles.yml file at C:\Users\XPS 15\.dbt\profiles.yml
+[0m06:52:56.088382 [info ] [MainThread]: Using dbt_project.yml file at C:\Users\XPS 15\OneDrive\Documents\DE\Airbnb\dbt_project.yml
+[0m06:52:56.089841 [error] [MainThread]: Encountered an error:
+Internal Error
+  Profile should not be None if loading profile completed
+[0m06:52:56.092294 [debug] [MainThread]: Command `dbt debug` failed at 06:52:56.091702 after 1.41 seconds
+[0m06:52:56.092932 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F623CD0E60>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F637611070>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F637850620>]}
+[0m06:52:56.093361 [debug] [MainThread]: Flushing usage events
+[0m06:52:57.148611 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m06:54:39.084807 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022DF956C8F0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022DF9509E20>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022DF8FC7800>]}
+
+
+============================== 06:54:39.090698 | d7e70581-28a5-4d85-88e4-f6d138412bcc ==============================
+[0m06:54:39.090698 [info ] [MainThread]: Running with dbt=1.9.4
+[0m06:54:39.092555 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\XPS 15\\.dbt', 'fail_fast': 'False', 'version_check': 'True', 'log_path': 'logs', 'warn_error': 'None', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'introspect': 'True', 'invocation_command': 'dbt debug', 'static_parser': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m06:54:39.134397 [info ] [MainThread]: dbt version: 1.9.4
+[0m06:54:39.135804 [info ] [MainThread]: python version: 3.12.3
+[0m06:54:39.136945 [info ] [MainThread]: python path: C:\Users\XPS 15\OneDrive\Documents\DE\E_COMMERCE_ETL\env\Scripts\python.exe
+[0m06:54:39.137820 [info ] [MainThread]: os info: Windows-10-10.0.19045-SP0
+[0m06:54:40.387519 [info ] [MainThread]: Using profiles dir at C:\Users\XPS 15\.dbt
+[0m06:54:40.389168 [info ] [MainThread]: Using profiles.yml file at C:\Users\XPS 15\.dbt\profiles.yml
+[0m06:54:40.390406 [info ] [MainThread]: Using dbt_project.yml file at C:\Users\XPS 15\OneDrive\Documents\DE\Airbnb\dbt_project.yml
+[0m06:54:40.391669 [error] [MainThread]: Encountered an error:
+Internal Error
+  Profile should not be None if loading profile completed
+[0m06:54:40.394516 [debug] [MainThread]: Command `dbt debug` failed at 06:54:40.394516 after 1.48 seconds
+[0m06:54:40.395225 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022DF9626270>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022D8A896D50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022DF99AD160>]}
+[0m06:54:40.396558 [debug] [MainThread]: Flushing usage events
+[0m06:54:41.660209 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m15:20:57.054173 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000278BF856480>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000278BEF07350>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000278BEF058E0>]}
+
+
+============================== 15:20:57.065172 | e15eb27e-18aa-469b-8ddd-f9c5fa55f166 ==============================
+[0m15:20:57.065172 [info ] [MainThread]: Running with dbt=1.9.4
+[0m15:20:57.067207 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'version_check': 'True', 'log_path': 'logs', 'profiles_dir': 'C:\\Users\\XPS 15\\.dbt', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'static_parser': 'True', 'invocation_command': 'dbt debug', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m15:20:57.122091 [info ] [MainThread]: dbt version: 1.9.4
+[0m15:20:57.124095 [info ] [MainThread]: python version: 3.12.3
+[0m15:20:57.125090 [info ] [MainThread]: python path: C:\Users\XPS 15\OneDrive\Documents\DE\Airbnb\airbnb-venv\Scripts\python.exe
+[0m15:20:57.127092 [info ] [MainThread]: os info: Windows-10-10.0.19045-SP0
+[0m15:20:57.952145 [info ] [MainThread]: Using profiles dir at C:\Users\XPS 15\.dbt
+[0m15:20:57.953135 [info ] [MainThread]: Using profiles.yml file at C:\Users\XPS 15\.dbt\profiles.yml
+[0m15:20:57.954135 [info ] [MainThread]: Using dbt_project.yml file at C:\Users\XPS 15\OneDrive\Documents\DE\Airbnb\dbt_project.yml
+[0m15:20:57.956135 [error] [MainThread]: Encountered an error:
+Internal Error
+  Profile should not be None if loading profile completed
+[0m15:20:57.958134 [debug] [MainThread]: Command `dbt debug` failed at 15:20:57.957138 after 1.09 seconds
+[0m15:20:57.959138 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000278C1777320>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000278BF246FC0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000278C147DA90>]}
+[0m15:20:57.960137 [debug] [MainThread]: Flushing usage events
+[0m15:20:58.987234 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m15:21:46.811081 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000014CC4DEB1A0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000014CC819A3C0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000014CC81996A0>]}
+
+
+============================== 15:21:46.821081 | bccbddcc-a582-43b7-8692-788d90148a57 ==============================
+[0m15:21:46.821081 [info ] [MainThread]: Running with dbt=1.9.4
+[0m15:21:46.823382 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\XPS 15\\.dbt', 'fail_fast': 'False', 'debug': 'False', 'log_path': 'logs', 'warn_error': 'None', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'log_format': 'default', 'static_parser': 'True', 'introspect': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'target_path': 'None', 'invocation_command': 'dbt init .\\airbnb_transformation\\', 'send_anonymous_usage_stats': 'True'}
+[0m15:22:09.664299 [info ] [MainThread]: A project called airbnb_transformation already exists here.
+[0m15:22:09.666298 [debug] [MainThread]: Command `dbt init` succeeded at 15:22:09.665298 after 23.11 seconds
+[0m15:22:09.666298 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000014CC83731A0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000014CC823BD70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000014CC8238170>]}
+[0m15:22:09.667298 [debug] [MainThread]: Flushing usage events
+[0m15:22:10.721358 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m15:22:22.157253 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E7DA9A3DA0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E7DA9A0F50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E7DB08BA70>]}
+
+
+============================== 15:22:22.163541 | da79579f-f832-44fa-bf61-e480a7069af6 ==============================
+[0m15:22:22.163541 [info ] [MainThread]: Running with dbt=1.9.4
+[0m15:22:22.164542 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\XPS 15\\.dbt', 'fail_fast': 'False', 'version_check': 'True', 'log_path': 'logs', 'warn_error': 'None', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'invocation_command': 'dbt debug', 'static_parser': 'True', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m15:22:22.203397 [info ] [MainThread]: dbt version: 1.9.4
+[0m15:22:22.204397 [info ] [MainThread]: python version: 3.12.3
+[0m15:22:22.206395 [info ] [MainThread]: python path: C:\Users\XPS 15\OneDrive\Documents\DE\Airbnb\airbnb-venv\Scripts\python.exe
+[0m15:22:22.208396 [info ] [MainThread]: os info: Windows-10-10.0.19045-SP0
+[0m15:22:22.916297 [info ] [MainThread]: Using profiles dir at C:\Users\XPS 15\.dbt
+[0m15:22:22.917319 [info ] [MainThread]: Using profiles.yml file at C:\Users\XPS 15\.dbt\profiles.yml
+[0m15:22:22.918296 [info ] [MainThread]: Using dbt_project.yml file at C:\Users\XPS 15\OneDrive\Documents\DE\Airbnb\dbt_project.yml
+[0m15:22:22.920296 [error] [MainThread]: Encountered an error:
+Internal Error
+  Profile should not be None if loading profile completed
+[0m15:22:22.922578 [debug] [MainThread]: Command `dbt debug` failed at 15:22:22.922578 after 0.92 seconds
+[0m15:22:22.923581 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E7DA9D8860>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E7DD635B20>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E7DAE39A00>]}
+[0m15:22:22.924581 [debug] [MainThread]: Flushing usage events
+[0m15:22:23.794448 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m15:23:27.190682 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002DB13FAAFF0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002DB16C2EC90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002DB136B3EC0>]}
+
+
+============================== 15:23:27.195944 | 73fd7bcd-78fe-4f59-ad15-b1f52ce9aa27 ==============================
+[0m15:23:27.195944 [info ] [MainThread]: Running with dbt=1.9.4
+[0m15:23:27.196928 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\XPS 15\\.dbt', 'debug': 'False', 'version_check': 'True', 'log_path': 'logs', 'fail_fast': 'False', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'log_format': 'default', 'introspect': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt debug', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m15:23:27.223018 [info ] [MainThread]: dbt version: 1.9.4
+[0m15:23:27.225018 [info ] [MainThread]: python version: 3.12.3
+[0m15:23:27.227023 [info ] [MainThread]: python path: C:\Users\XPS 15\OneDrive\Documents\DE\Airbnb\airbnb-venv\Scripts\python.exe
+[0m15:23:27.228048 [info ] [MainThread]: os info: Windows-10-10.0.19045-SP0
+[0m15:23:27.702494 [info ] [MainThread]: Using profiles dir at C:\Users\XPS 15\.dbt
+[0m15:23:27.703501 [info ] [MainThread]: Using profiles.yml file at C:\Users\XPS 15\.dbt\profiles.yml
+[0m15:23:27.704497 [info ] [MainThread]: Using dbt_project.yml file at C:\Users\XPS 15\OneDrive\Documents\DE\Airbnb\dbt_project.yml
+[0m15:23:27.705513 [error] [MainThread]: Encountered an error:
+Internal Error
+  Profile should not be None if loading profile completed
+[0m15:23:27.707497 [debug] [MainThread]: Command `dbt debug` failed at 15:23:27.706504 after 0.68 seconds
+[0m15:23:27.707497 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002DB16AE80B0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002DB1701BE00>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002DB16B59160>]}
+[0m15:23:27.708516 [debug] [MainThread]: Flushing usage events
+[0m15:23:28.657448 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m15:26:50.768843 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E37F5DAFF0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E3029EBB60>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E3029EB860>]}
+
+
+============================== 15:26:50.776843 | 8fda6e4c-d21b-43dd-b10d-f5cc0be7f97f ==============================
+[0m15:26:50.776843 [info ] [MainThread]: Running with dbt=1.9.4
+[0m15:26:50.778843 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'profiles_dir': 'C:\\Users\\XPS 15\\.dbt', 'log_path': 'logs', 'debug': 'False', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt debug', 'log_format': 'default', 'static_parser': 'True', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m15:26:50.812842 [info ] [MainThread]: dbt version: 1.9.4
+[0m15:26:50.815863 [info ] [MainThread]: python version: 3.12.3
+[0m15:26:50.816845 [info ] [MainThread]: python path: C:\Users\XPS 15\OneDrive\Documents\DE\Airbnb\airbnb-venv\Scripts\python.exe
+[0m15:26:50.817843 [info ] [MainThread]: os info: Windows-10-10.0.19045-SP0
+[0m15:26:51.429433 [info ] [MainThread]: Using profiles dir at C:\Users\XPS 15\.dbt
+[0m15:26:51.430433 [info ] [MainThread]: Using profiles.yml file at C:\Users\XPS 15\.dbt\profiles.yml
+[0m15:26:51.431433 [info ] [MainThread]: Using dbt_project.yml file at C:\Users\XPS 15\OneDrive\Documents\DE\Airbnb\dbt_project.yml
+[0m15:26:51.432433 [error] [MainThread]: Encountered an error:
+Internal Error
+  Profile should not be None if loading profile completed
+[0m15:26:51.434433 [debug] [MainThread]: Command `dbt debug` failed at 15:26:51.433434 after 0.93 seconds
+[0m15:26:51.434433 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E302B4A4E0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E302EA6FF0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E304F8A3F0>]}
+[0m15:26:51.435433 [debug] [MainThread]: Flushing usage events
+[0m15:26:52.602837 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m15:30:09.524655 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000023B7D9F8F20>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000023B7AC73E60>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000023B7DFE3200>]}
+
+
+============================== 15:30:09.536333 | 1f9bbfaf-dbf1-48a7-834d-292d73fc988d ==============================
+[0m15:30:09.536333 [info ] [MainThread]: Running with dbt=1.9.4
+[0m15:30:09.537334 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'debug': 'False', 'log_path': 'logs', 'fail_fast': 'False', 'profiles_dir': 'C:\\Users\\XPS 15\\.dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'log_format': 'default', 'invocation_command': 'dbt debug', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m15:30:09.584383 [info ] [MainThread]: dbt version: 1.9.4
+[0m15:30:09.586358 [info ] [MainThread]: python version: 3.12.3
+[0m15:30:09.588363 [info ] [MainThread]: python path: C:\Users\XPS 15\OneDrive\Documents\DE\Airbnb\airbnb-venv\Scripts\python.exe
+[0m15:30:09.590355 [info ] [MainThread]: os info: Windows-10-10.0.19045-SP0
+[0m15:30:10.390630 [info ] [MainThread]: Using profiles dir at C:\Users\XPS 15\.dbt
+[0m15:30:10.392629 [info ] [MainThread]: Using profiles.yml file at C:\Users\XPS 15\.dbt\profiles.yml
+[0m15:30:10.393630 [info ] [MainThread]: Using dbt_project.yml file at C:\Users\XPS 15\OneDrive\Documents\DE\Airbnb\dbt_project.yml
+[0m15:30:10.396638 [error] [MainThread]: Encountered an error:
+Internal Error
+  Profile should not be None if loading profile completed
+[0m15:30:10.402631 [debug] [MainThread]: Command `dbt debug` failed at 15:30:10.402631 after 1.11 seconds
+[0m15:30:10.403645 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000023B7DBC2C60>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000023B7F696F90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000023B7F1DDE20>]}
+[0m15:30:10.404629 [debug] [MainThread]: Flushing usage events
+[0m15:30:11.630440 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m15:36:42.881265 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000240FF4C1F10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024082026DE0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000240823880E0>]}
+
+
+============================== 15:36:42.888939 | b621b86f-d6a3-4f03-9fca-b7f9e9ed48a3 ==============================
+[0m15:36:42.888939 [info ] [MainThread]: Running with dbt=1.9.4
+[0m15:36:42.890942 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'debug': 'False', 'log_path': 'logs', 'fail_fast': 'False', 'profiles_dir': 'C:\\Users\\XPS 15\\.dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'introspect': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'target_path': 'None', 'invocation_command': 'dbt debug', 'send_anonymous_usage_stats': 'True'}
+[0m15:36:42.939197 [info ] [MainThread]: dbt version: 1.9.4
+[0m15:36:42.940203 [info ] [MainThread]: python version: 3.12.3
+[0m15:36:42.942950 [info ] [MainThread]: python path: C:\Users\XPS 15\OneDrive\Documents\DE\Airbnb\airbnb-venv\Scripts\python.exe
+[0m15:36:42.943951 [info ] [MainThread]: os info: Windows-10-10.0.19045-SP0
+[0m15:36:43.683732 [info ] [MainThread]: Using profiles dir at C:\Users\XPS 15\.dbt
+[0m15:36:43.685734 [info ] [MainThread]: Using profiles.yml file at C:\Users\XPS 15\.dbt\profiles.yml
+[0m15:36:43.686736 [info ] [MainThread]: Using dbt_project.yml file at C:\Users\XPS 15\OneDrive\Documents\DE\Airbnb\dbt_project.yml
+[0m15:36:43.688738 [error] [MainThread]: Encountered an error:
+Internal Error
+  Profile should not be None if loading profile completed
+[0m15:36:43.692736 [debug] [MainThread]: Command `dbt debug` failed at 15:36:43.691735 after 1.09 seconds
+[0m15:36:43.694739 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000240FF4C1F10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000240FC1613A0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000240843F2AB0>]}
+[0m15:36:43.695738 [debug] [MainThread]: Flushing usage events
+[0m15:36:44.809026 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m15:38:47.088724 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E7D09AB350>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E7D27113A0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E7D2F21190>]}
+
+
+============================== 15:38:47.094890 | 86eb9d2c-6956-4820-96e5-185cf79d2aec ==============================
+[0m15:38:47.094890 [info ] [MainThread]: Running with dbt=1.9.4
+[0m15:38:47.095889 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\XPS 15\\.dbt', 'version_check': 'True', 'debug': 'False', 'log_path': 'logs', 'fail_fast': 'False', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt init airbnb_transform', 'introspect': 'True', 'static_parser': 'True', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m15:38:47.131040 [debug] [MainThread]: Starter project path: C:\Users\XPS 15\OneDrive\Documents\DE\Airbnb\airbnb-venv\Lib\site-packages\dbt\include\starter_project
+[0m15:38:47.179152 [info ] [MainThread]: 
+Your new dbt project "airbnb_transform" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m15:38:47.182152 [info ] [MainThread]: Setting up your profile.
+[0m15:39:44.665967 [info ] [MainThread]: Profile airbnb_transform written to C:\Users\XPS 15\.dbt\profiles.yml using target's profile_template.yml and your supplied values. Run 'dbt debug' to validate the connection.
+[0m15:39:44.667969 [debug] [MainThread]: Command `dbt init` succeeded at 15:39:44.667969 after 57.87 seconds
+[0m15:39:44.668970 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E7D36AC3B0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E7D2EC2870>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E7D2EC2840>]}
+[0m15:39:44.669965 [debug] [MainThread]: Flushing usage events
+[0m15:39:45.573753 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m15:40:47.945588 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001AEE3803770>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001AEE35B3950>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001AEE3EF0500>]}
+
+
+============================== 15:40:47.952770 | 50473958-bbf6-4ac7-bf69-da4daed7b0e9 ==============================
+[0m15:40:47.952770 [info ] [MainThread]: Running with dbt=1.9.4
+[0m15:40:47.954771 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\XPS 15\\.dbt', 'fail_fast': 'False', 'debug': 'False', 'log_path': 'logs', 'warn_error': 'None', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'log_format': 'default', 'invocation_command': 'dbt debug', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m15:40:48.000114 [info ] [MainThread]: dbt version: 1.9.4
+[0m15:40:48.002115 [info ] [MainThread]: python version: 3.12.3
+[0m15:40:48.003129 [info ] [MainThread]: python path: C:\Users\XPS 15\OneDrive\Documents\DE\Airbnb\airbnb-venv\Scripts\python.exe
+[0m15:40:48.005122 [info ] [MainThread]: os info: Windows-10-10.0.19045-SP0
+[0m15:40:48.666778 [info ] [MainThread]: Using profiles dir at C:\Users\XPS 15\.dbt
+[0m15:40:48.668779 [info ] [MainThread]: Using profiles.yml file at C:\Users\XPS 15\.dbt\profiles.yml
+[0m15:40:48.669779 [info ] [MainThread]: Using dbt_project.yml file at C:\Users\XPS 15\OneDrive\Documents\DE\Airbnb\dbt_project.yml
+[0m15:40:48.669779 [error] [MainThread]: Encountered an error:
+Internal Error
+  Profile should not be None if loading profile completed
+[0m15:40:48.671953 [debug] [MainThread]: Command `dbt debug` failed at 15:40:48.671834 after 1.01 seconds
+[0m15:40:48.671953 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001AEE424F680>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001AEE6382AB0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001AEE437E3C0>]}
+[0m15:40:48.672959 [debug] [MainThread]: Flushing usage events
+[0m15:40:49.672404 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m15:41:03.327353 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000167868C0680>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000167887F0C50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000016786273DD0>]}
+
+
+============================== 15:41:03.332696 | 9e46c69c-cc9c-408a-9cde-75cc01c2e354 ==============================
+[0m15:41:03.332696 [info ] [MainThread]: Running with dbt=1.9.4
+[0m15:41:03.334692 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'profiles_dir': 'C:\\Users\\XPS 15\\.dbt', 'log_path': 'logs', 'debug': 'False', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'log_format': 'default', 'invocation_command': 'dbt debug', 'introspect': 'True', 'static_parser': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m15:41:03.361805 [info ] [MainThread]: dbt version: 1.9.4
+[0m15:41:03.361805 [info ] [MainThread]: python version: 3.12.3
+[0m15:41:03.362809 [info ] [MainThread]: python path: C:\Users\XPS 15\OneDrive\Documents\DE\Airbnb\airbnb-venv\Scripts\python.exe
+[0m15:41:03.363808 [info ] [MainThread]: os info: Windows-10-10.0.19045-SP0
+[0m15:41:03.913071 [info ] [MainThread]: Using profiles dir at C:\Users\XPS 15\.dbt
+[0m15:41:03.915073 [info ] [MainThread]: Using profiles.yml file at C:\Users\XPS 15\.dbt\profiles.yml
+[0m15:41:03.916078 [info ] [MainThread]: Using dbt_project.yml file at C:\Users\XPS 15\OneDrive\Documents\DE\Airbnb\dbt_project.yml
+[0m15:41:03.917074 [error] [MainThread]: Encountered an error:
+Internal Error
+  Profile should not be None if loading profile completed
+[0m15:41:03.920075 [debug] [MainThread]: Command `dbt debug` failed at 15:41:03.919071 after 0.77 seconds
+[0m15:41:03.921076 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000167868C0680>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001678B30AAB0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001678B02B860>]}
+[0m15:41:03.922514 [debug] [MainThread]: Flushing usage events
+[0m15:41:04.827573 [debug] [MainThread]: An error was encountered while trying to flush usage events

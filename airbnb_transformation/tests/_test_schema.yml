@@ -1,0 +1,20 @@
+version: 2
+
+data_tests:
+  - name: assert_listing_price_is_not_null
+    description: >
+      Ensures that all listings have a non-null price value. This test identifies records where
+      `listing_price` is null, which may indicate incomplete or invalid listing data.
+
+  - name: assert_valid_room_types
+    description: >
+      Ensures that all listings have a valid `room_type` value. This test checks whether the
+      `room_type` falls within the accepted categories: "Entire home/apt", "Private room",
+      "Shared room", or "Hotel room". Listings with any other values may indicate data quality issues
+      or inconsistencies in source data.
+
+  - name: valid_superhost_status
+    description: >
+      Ensures that all listings have a valid value for `host_is_superhost`. This test checks whether
+      the `host_is_superhost` field contains only accepted values such as 'Yes', 'No'.
+      Any other value may indicate a data quality issue or an unexpected source format.
