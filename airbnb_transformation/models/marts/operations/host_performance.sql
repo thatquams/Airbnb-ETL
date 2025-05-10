@@ -5,7 +5,7 @@ WITH host_performance AS (
                         h.superhost, l.updated_at AS listings_updated_at, r.sentiment AS listing_review_sentiment
                             FROM {{ ref ("dim_host") }} h 
                             LEFT JOIN {{ ref("fct_listings") }} l ON h.host_id = l.host_id
-                            LEFT JOIN {{ ref("dim_reviews") }} r ON l.listing_id = r.listing_id
+                            INNER JOIN {{ ref("dim_reviews") }} r ON l.listing_id = r.listing_id
                         
 )
 

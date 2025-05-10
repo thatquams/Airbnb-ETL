@@ -1,1 +1,4 @@
-airbnb-env/
+
+airbnb_transformation/target/
+airbnb_transformation/dbt_packages/
+airbnb_transformation/logs/
