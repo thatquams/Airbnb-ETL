@@ -7,18 +7,18 @@ models:
       This table represents the core transactional entity in the Airbnb dataset.
 
     columns:
-      - name: listing_id
+      - name: listing_key
         description: Unique identifier for each Airbnb listing.
         tests:
           - unique
           - not_null
 
-      - name: host_id
+      - name: host_key
         description: Foreign key linking each listing to a host in the dim_host table.
         tests:
           - relationships:
               to: ref('dim_host')
-              field: host_id
+              field: host_key
           - not_null
 
   - name: dim_host
@@ -46,7 +46,7 @@ models:
       Includes sentiment classification and a reference to the associated listing.
 
     columns:
-      - name: review_id
+      - name: review_key
         description: Unique identifier for each review.
         tests:
           - unique
@@ -60,9 +60,9 @@ models:
           - accepted_values:
               values: [0, 1, 2]
 
-      - name: listing_id
+      - name: listing_key
         description: Foreign key linking each review to a listing in the fct_listings table.
         tests:
           - relationships:
               to: ref('fct_listings')
-              field: listing_id
+              field: listing_key
