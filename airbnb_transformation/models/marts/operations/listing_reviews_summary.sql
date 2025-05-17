@@ -1,3 +1,9 @@
+{{
+    config(
+        pre_hook = ["SELECT * FROM {{ref('fct_listings')}}", "SELECT * FROM {{ref('dim_reviews') }}" ]
+        )
+}}
+
 WITH listings_reviews_summary AS (
 
 SELECT l.listing_name, l.room_type, l.minimum_nights, l.host_key,
