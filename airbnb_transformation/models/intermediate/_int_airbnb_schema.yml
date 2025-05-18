@@ -38,7 +38,7 @@ models:
           Indicates whether a host has Superhost status. Expected values are 'Y' for yes and 'N' for no.
         tests:
           - accepted_values:
-              values: ['Y', 'N']
+              values: ['Y', 'N', 'N/A']
 
   - name: dim_reviews
     description: >

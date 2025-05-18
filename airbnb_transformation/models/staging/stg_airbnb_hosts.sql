@@ -3,4 +3,4 @@ WITH stg_hosts AS (
 )
 
 
-SELECT * FROM stg_hosts
+SELECT * FROM stg_hosts WHERE name IS NOT NULL ORDER BY name DESC

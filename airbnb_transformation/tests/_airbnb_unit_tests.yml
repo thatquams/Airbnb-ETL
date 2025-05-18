@@ -1,19 +1,19 @@
-# unit_tests:
-#   - name: test_review_sentiment_case
-#     description: "Validate review sentiments case statement"
-#     model: dim_reviews
-#     given:
-#       - input: ref('stg_airbnb_reviews')
-#         rows:
-#           - {listing_id: 3176,    reviewer_name: Milan, sentiment: positive}
-#           - {listing_id: 3176,    reviewer_name: Benedetta, sentiment: neutral}
-#           - {listing_id: 7071,    reviewer_name: Sylvie, sentiment: positive}
+unit_tests:
+  - name: test_is_superhost
+    description: "Validates the `is_superhost` case statement"
+    model: dim_host
+    given:
+      - input: ref('stg_airbnb_hosts')
+        rows:
+          - {ID: 227835898, name: Zviad, is_superhost: f}
+          - {ID: 242128703, name: Zöhre, is_superhost: t}
+          
 
-#     expect:
-#       rows:
-#         - {listing_id: 3176, reviewer_name: Milan,   sentiment: 1}
-#         - {listing_id: 3176, reviewer_name: Benedetta, sentiment: 2}
-#         - {listing_id: 7071, reviewer_name: Sylvie, sentiment: 1}
+    expect:
+      rows:
+        - {host_key: 28fe96f6032dedf13039360ad93b2d74, host_name: Zviad, superhost: N}
+        - {host_key: 1f063daec380952d10778b70afd95f3b, host_name: Zöhre, superhost: Y}
+
 
 
 #   - name: test_validate_number_of_reviews
