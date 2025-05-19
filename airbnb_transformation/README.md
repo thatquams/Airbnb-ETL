@@ -1,15 +1,33 @@
-Welcome to your new dbt project!
+# 🏡 Airbnb ETL Project (dbt)
 
-### Using the starter project
+Welcome to the Airbnb ETL project!  
+This dbt project transforms and models raw Airbnb data for analysis and reporting. It covers listings, hosts, reviews, and derived fact and dimension tables for improved analytical insights.
 
-Try running the following commands:
-- dbt run
-- dbt test
+---
 
+## 📁 Project Structure
 
-### Resources:
-- Learn more about dbt [in the docs](https://docs.getdbt.com/docs/introduction)
-- Check out [Discourse](https://discourse.getdbt.com/) for commonly asked questions and answers
-- Join the [chat](https://community.getdbt.com/) on Slack for live discussions and support
-- Find [dbt events](https://events.getdbt.com) near you
-- Check out [the blog](https://blog.getdbt.com/) for the latest news on dbt's development and best practices
+This project is organized using modular dbt best practices:
+
+- **Staging Models (`stg_*`)**  
+  Clean and standardize raw Airbnb source tables.
+
+- **Dimension Tables (`dim_*`)**  
+  Enriched entities like hosts and reviews for descriptive analysis.
+
+- **Fact Tables (`fct_*`)**  
+  Transactional datasets such as listings with metrics and foreign keys.
+
+- **Macros**  
+  Utility functions for price normalization, date formatting, and surrogate key generation.
+
+---
+
+## 🚀 How to Use
+
+Run the following dbt commands after setting up your environment:
+
+```bash
+dbt run        # Build models
+dbt test       # Run tests on models
+dbt docs generate && dbt docs serve  # Generate and browse model documentation

@@ -1,15 +1,23 @@
 version: 2
 
 macros:
-  - name: price_normalization
+  - name: normalize_price
+    description: >
+      This macro removes the dollar sign ('$') from a price column and casts the result 
+      to a numeric format (NUMBER(10,2)). It is used to standardize price fields in staging 
+      or fact models where price is originally stored as a string.
+
     arguments:
       - name: column_name
-        type: column
-        description: "Converts column data type into float"
-      
+        type: string
+        description: The column containing price values in string format, usually prefixed with a dollar sign.
+
   - name: date_formatting
+    description: >
+      This macro converts a date column to a standard `DATE` data type using the SQL `TO_DATE` function.
+      It ensures consistent date formatting across staging and analytical models.
+
     arguments:
       - name: date_column
-        type: column
-        description: "Normalize date column"
-      
+        type: string
+        description: The name of the column containing the date or datetime values to be converted.

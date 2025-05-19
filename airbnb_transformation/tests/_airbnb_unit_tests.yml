@@ -1,35 +1,44 @@
 unit_tests:
   - name: test_is_superhost
-    description: "Validates the `is_superhost` case statement"
+    description: >
+      Validates the transformation logic in the `dim_host` model for the `is_superhost` field.
+      Ensures that the CASE statement correctly maps:
+      - 'f' → 'N'
+      - 't' → 'Y'
+
     model: dim_host
+
     given:
       - input: ref('stg_airbnb_hosts')
         rows:
-          - {ID: 227835898, name: Zviad, is_superhost: f}
-          - {ID: 242128703, name: Zöhre, is_superhost: t}
-          
+          - {id: 227835898, name: "Zviad", is_superhost: "f"}
+          - {id: 242128703, name: "Zöhre", is_superhost: "t"}
 
     expect:
       rows:
-        - {host_key: 28fe96f6032dedf13039360ad93b2d74, host_name: Zviad, superhost: N}
-        - {host_key: 1f063daec380952d10778b70afd95f3b, host_name: Zöhre, superhost: Y}
-
+        - {host_key: "28fe96f6032dedf13039360ad93b2d74", host_name: "Zviad", superhost: "N"}
+        - {host_key: "1f063daec380952d10778b70afd95f3b", host_name: "Zöhre", superhost: "Y"}
 
 
   - name: test_review_sentiments
-    description: "Validate Review Sentiments"
+    description: >
+      Validates the sentiment classification logic in the `dim_reviews` model.
+      Ensures the CASE statement maps sentiment text to expected numeric values:
+      - 'positive' → 1
+      - 'negative' → 0
+      - others (e.g., 'neutral') → 2
+
     model: dim_reviews
+
     given:
       - input: ref('stg_airbnb_reviews')
         rows:
-          - { listing_id: 3176, reviewer_name: Milan, sentiment: positive}
-          - { listing_id: 3176, reviewer_name: Benedetta, sentiment: neutral}
-          - { listing_id: 3176, reviewer_name: Aude, sentiment: positive}
-         
+          - {listing_id: 3176, reviewer_name: "Milan", sentiment: "positive"}
+          - {listing_id: 3176, reviewer_name: "Benedetta", sentiment: "neutral"}
+          - {listing_id: 3176, reviewer_name: "Aude", sentiment: "positive"}
+
     expect:
       rows:
-        - {listing_key: 59dfa2df42d9e3d41f5b02bfc32229dd, reviewer_name: Milan, sentiment: 1}
-        - {listing_key: 59dfa2df42d9e3d41f5b02bfc32229dd, reviewer_name: Benedetta, sentiment: 2}
-        - {listing_key: 59dfa2df42d9e3d41f5b02bfc32229dd, reviewer_name: Aude, sentiment: 1}
-        
-        
+        - {listing_key: "59dfa2df42d9e3d41f5b02bfc32229dd", reviewer_name: "Milan", sentiment: 1}
+        - {listing_key: "59dfa2df42d9e3d41f5b02bfc32229dd", reviewer_name: "Benedetta", sentiment: 2}
+        - {listing_key: "59dfa2df42d9e3d41f5b02bfc32229dd", reviewer_name: "Aude", sentiment: 1}

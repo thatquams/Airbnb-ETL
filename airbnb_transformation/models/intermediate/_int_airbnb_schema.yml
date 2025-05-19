@@ -4,41 +4,76 @@ models:
   - name: fct_listings
     description: >
       Fact table containing listing-level data, including host and property identifiers.
-      This table represents the core transactional entity in the Airbnb dataset.
+      This table represents the core transactional entity in the Airbnb dataset. It includes
+      normalized price data and formatted timestamps to support consistent analytics.
 
     columns:
       - name: listing_key
-        description: Unique identifier for each Airbnb listing.
+        description: Unique surrogate key for each Airbnb listing, generated using the listing ID.
         tests:
           - unique
           - not_null
 
       - name: host_key
-        description: Foreign key linking each listing to a host in the dim_host table.
+        description: Surrogate key linking each listing to a host in the dim_host table.
         tests:
+          - not_null
           - relationships:
               to: ref('dim_host')
               field: host_key
+
+      - name: date_key
+        description: Surrogate key representing the creation date of the listing, used for time-based analysis.
+        tests:
           - not_null
+
+      - name: listing_name
+        description: The name/title of the Airbnb listing.
+
+      - name: room_type
+        description: Type of room offered (e.g., Entire home/apt, Private room).
+
+      - name: minimum_nights
+        description: Minimum number of nights required to book the listing.
+
+      - name: listing_price
+        description: Normalized price of the listing after applying transformations.
+
+      - name: updated_at
+        description: Timestamp indicating the last update time for the listing, formatted for consistency.
 
   - name: dim_host
     description: >
-      Dimension table containing details about hosts. Includes attributes like Superhost
-      status and serves as a lookup for listings and reviews authored by the host.
+      Dimension table containing details about Airbnb hosts. Includes attributes such as
+      Superhost status and serves as a lookup for listings created by the host.
 
     columns:
-      - name: host_id
-        description: Unique identifier for each host.
+      - name: host_key
+        description: Unique surrogate key for each host, generated from the host ID.
         tests:
           - unique
           - not_null
 
+      - name: host_name
+        description: Name of the Airbnb host.
+
       - name: superhost
         description: >
-          Indicates whether a host has Superhost status. Expected values are 'Y' for yes and 'N' for no.
+          Indicates whether a host has Superhost status.
+          Values: 'Y' = Yes, 'N' = No.
         tests:
+          - not_null
           - accepted_values:
-              values: ['Y', 'N', 'N/A']
+              values: ['Y', 'N']
+
+      - name: created_at
+        description: Timestamp when the host account was created, formatted for consistency.
+        tests:
+          - not_null
+
+      - name: updated_at
+        description: Timestamp of the host's most recent profile update.
+
 
   - name: dim_reviews
     description: >
@@ -47,22 +82,73 @@ models:
 
     columns:
       - name: review_key
-        description: Unique identifier for each review.
+        description: Unique surrogate key for each review, based on listing, reviewer, and review date.
         tests:
           - unique
           - not_null
 
-      - name: sentiment
-        description: >
-          Numerical sentiment score assigned to each review.
-          Values: 0 = negative, 1 = neutral, 2 = positive.
-        tests:
-          - accepted_values:
-              values: [0, 1, 2]
-
       - name: listing_key
         description: Foreign key linking each review to a listing in the fct_listings table.
         tests:
+          - not_null
           - relationships:
               to: ref('fct_listings')
               field: listing_key
+
+      - name: reviewer_name
+        description: Name of the guest who left the review.
+
+      - name: sentiment
+        description: >
+          Numerical sentiment classification assigned to each review.
+          Values: 0 = negative, 1 = positive, 2 = neutral.
+        tests:
+          - not_null
+          - accepted_values:
+              values: [0, 1, 2]
+
+      - name: review_date
+        description: Date the review was submitted, formatted consistently for analysis.
+        tests:
+          - not_null
+
+  - name: dim_date
+    description: >
+      A date dimension table generated using the `dbt_date` package.
+      Includes attributes such as day, month, quarter, and year to support time-based analysis
+      across fact tables.
+
+    columns:
+      - name: date_key
+        description: Surrogate key for each unique date in the dimension table.
+        tests:
+          - unique
+          - not_null
+
+      - name: date
+        description: The actual calendar date (YYYY-MM-DD).
+        tests:
+          - unique
+          - not_null
+
+      - name: day_of_week
+        description: Name of the day of the week (e.g., Monday, Tuesday).
+        tests:
+          - not_null
+
+      - name: month_name
+        description: Name of the month (e.g., January, February).
+        tests:
+          - not_null
+
+      - name: quarter_of_year
+        description: Integer value representing the quarter (1 to 4).
+        tests:
+          - not_null
+          - accepted_values:
+              values: [1, 2, 3, 4]
+
+      - name: year
+        description: The four-digit year (e.g., 2023).
+        tests:
+          - not_null

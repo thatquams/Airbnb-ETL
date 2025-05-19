@@ -4,7 +4,7 @@ WITH listings_review AS (
                                             WHEN sentiment = 'positive' THEN 1
                                             WHEN sentiment = 'negative' THEN 0
                                             ELSE 2
-                                        END AS sentiment, date AS review_date FROM {{ ref("stg_airbnb_reviews")}}
+                                        END AS sentiment, {{ date_formatting("date") }} AS review_date FROM {{ ref("stg_airbnb_reviews")}}
 
 )
 

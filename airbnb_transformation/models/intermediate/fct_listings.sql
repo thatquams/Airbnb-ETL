@@ -15,7 +15,7 @@ WITH fct_listings AS (
             {{dbt_utils.generate_surrogate_key(['l.created_at']) }} AS date_key,
             l.name AS listing_name, l.room_type, l.minimum_nights, 
             {{ normalize_price('l.price') }} AS listing_price,
-            l.updated_at AS updated_at
+            {{date_formatting("l.updated_at") }} AS updated_at
 
     FROM {{ ref("stg_airbnb_listings") }} l
 )

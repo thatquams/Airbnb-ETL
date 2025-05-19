@@ -1,5 +1,5 @@
 WITH dates AS (
-    {{ dbt_date.get_date_dimension('2010-01-01', '2025-12-31') }}
+    {{ dbt_date.get_date_dimension('2000-01-01', '2025-12-31') }}
 ),
 
  date_dim AS (
